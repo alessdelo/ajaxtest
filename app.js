@@ -18,7 +18,7 @@ var app = express()
  // app.use('/', home)
  // app.use('/home', home)
 
-app.get('/', (req, res) => res.render(index,pageData.aframear))
+app.get('/', (req, res) => res.render('index',pageData.aframear))
 
 // temporary ajax test
 app.get('/ajaxTest', (req, res) => res.send("ajax1Test3 OK!"))
