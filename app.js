@@ -12,19 +12,10 @@ var app = express()
   app.use(bodyParser.json())
   app.use(bodyParser.urlencoded({extended: true}))
 
+app.get('/', (req, res) => res.render('index'))
 
- // app.use(bodyParser.json())
- // app.use(bodyParser.urlencoded({extended: false}))
- // app.use('/', home)
- // app.use('/home', home)
+// file for the ajax call
+app.get('/ajaxTest', (req, res) => res.send("Ajax Test is OK!"))
 
-app.get('/', (req, res) => res.render('index',pageData.aframear))
 
-// temporary ajax test
-app.get('/ajaxTest', (req, res) => res.send("ajax1Test3 OK!"))
-
-// ---------------------------------
-// ---------------------------------
-// ---------------------------------
-
-  app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
