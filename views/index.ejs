@@ -20,5 +20,30 @@
         </div>
     </div>
 
+<script>
+
+function ajaxTest(target) {
+                
+                    $(target).click(function() {
+		    
+		   	alert("aaaaaaaaa");
+			
+                        $.ajax({
+					url: '/ajaxTest',
+					type: 'get',
+					dataType:'text',
+					success: function(data) { alert('ok'); },
+					error: function() {
+					     alert(error);
+					}
+			}); 
+			alert("ooooooooo");
+			$("#theText").html("theData");
+			
+                    }); // end $target function
+                } // end ajaxTest
+
+</script>
+
 </body>
 </html>
