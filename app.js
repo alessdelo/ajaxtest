@@ -15,7 +15,10 @@ var app = express()
 app.get('/', (req, res) => res.render('index'))
 
 // file for the ajax call
-app.get('/ajaxTest', (req, res) => res.send("Ajax Test is OK!"))
+//app.get('/ajaxTest', (req, res) => res.send("Ajax Test is OK!"))
+
+app.get('/ajaxTest', (req, res) => res.json({output: "test"}))
+
 
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
